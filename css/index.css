@@ -1,0 +1,60 @@
+body,ul,ol,li,h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#zuo{
+	position: absolute;
+	top: 0;
+	bottom: 0px;
+	width: 50px;
+	background: #333;
+	color: #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#you{
+	position: absolute;
+	left: 70px;
+	right: 0px;
+	top: 0;
+	bottom: 0;
+	background-image: url(../image/2115.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 0;
+}
+#canvas{
+	border: 1px solid #333;
+	position: absolute;
+	top: 35px;
+	right: 50%;
+	margin-right: -500px;
+	background:rgba(255,255,255,0.9);
+
+}
+#zuo span{
+	font-size: 20px;	
+	color: #fff;
+}
+#shiti,#xiantiao{
+	color: #fff;
+}
+.colstyle{
+	color: orange;
+}
+#xiankuan{
+	width: 50px;
+	background: #fff;
+	margin-top: 20px;
+}
+#xiankuan li{
+	width: 45px;
+	margin:0 auto;
+	line-height: 20px;
+	padding: 5px 0;
+}
+#xiankuan li span{
+	background: #000;
+	display: block;
+}

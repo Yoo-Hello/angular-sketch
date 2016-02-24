@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sketch">
+<head>
+	<meta charset="UTF-8">
+	<title>画板</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/angular.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body ng-controller="sketchcontroller">
+	<div id="zuo">
+	    <ul>
+	    	<li ng-repeat="(key, value) in tools track by $index" ng-click="setTool(value)" ng-class="{colstyle:value==tool}" >{{key}}</li>
+	    </ul>
+	    <hr>
+	    <div ng-class="{colstyle:cssStyle.style=='fill'}" ng-click="setStyle('fill')">实体</div>
+	    <input type="color" ng-model="cssStyle.fillstyle">
+	    <div ng-class="{colstyle:cssStyle.style=='stroke'}" ng-click="setStyle('stroke')">线体</div>
+	   
+	    <input type="color" ng-model="cssStyle.strokestyle">
+	    <div>
+	    	<ul id="xiankuan">
+	    		<li ng-repeat="value in xiankuan" ng-click="cssStyle.lineWidth=value"><span style="height:{{value}}px;"></span></li>
+	    	</ul>
+	    </div>
+	    <hr>
+	    <div ng-click="newcanvas()">新建</div>
+	    <div ng-click="download()">保存</div>
+	    <div>后退</div>
+
+	</div>
+	<div id="you">
+		<canvas id="canvas" width="{{cketchWH.width}}" height="{{cketchWH.height}}"></canvas>
+	</div>
+</body>
+</html>
+<!-- range滑块 -->
+<!-- track by $index -->
